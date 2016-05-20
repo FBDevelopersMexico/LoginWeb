@@ -90,7 +90,7 @@
     FB.api('/me/feed', 'post', {message: 'Hello, world!'});
       }, {scope: 'publish_actions'});
   }
-  function Amigos(){
+  function Foto(){
     FB.api('/me?fields=id,name,birthday,picture.type(large)', 'get',function(response){
         console.log(response.picture.data.url);
         document.getElementById('foto').src=response.picture.data.url;
@@ -125,7 +125,7 @@
       <ul class="nav navbar-nav">
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://www.facebook.com/groups/476463749198108" target="_blank">Facebook Delopers Group México City</a></li>
+        <li><a href="https://www.facebook.com/groups/476463749198108" target="_blank">Facebook Developers in Ciudad de México</a></li>
 
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -138,8 +138,8 @@
   <div id="status">
   </div>
   <img src="http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg" width="200px" id="foto">
-  <br><button onclick=Publicar();>Publicar</button><br>
-  <button onclick="Amigos();">Obtener fotografía</button>
+  <br><button type="button" class="btn btn-default margen" onclick=Publicar();>Publicar</button><br>
+  <button onclick="Foto();" type="button" class="btn btn-default margen">Obtener fotografía</button>
 </div>
 
 
