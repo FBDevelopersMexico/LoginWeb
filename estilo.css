@@ -1,0 +1,19 @@
+.navbar-default {
+    border-color: #3E5B96;
+    background-color: #3E5B96;
+    background-image: none;
+}
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: white;
+}
+.navbar-brand {
+
+    padding: 5px;
+
+}
+.centro{
+  text-align: center;
+}
