@@ -40,7 +40,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '247423485614239',
+    appId      : '',
     cookie     : true,  // enable cookies to allow the server to access
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -86,18 +86,16 @@
   }
   function Publicar(){
     FB.login(function(){
-    // Note: The call will only work if you accept the permission request
-    FB.api('/me/feed', 'post', {message: 'Hello, world!'});
-      }, {scope: 'publish_actions'});
-  }
+      FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+        }, {scope: 'publish_actions'});
+    }
   function Foto(){
     FB.api('/me?fields=id,name,birthday,picture.type(large)', 'get',function(response){
         console.log(response.picture.data.url);
         document.getElementById('foto').src=response.picture.data.url;
+        console.log(response.email);
 
     });
-
-
   }
 
 </script>
